@@ -4,6 +4,9 @@ LAYER
    GROUP "default"
    DEBUG _layerdebug
    NAME layername(land,_layer_suffix)
+   METADATA
+    "wms_title" layername(land,_layer_suffix)
+   END
    PROCESSING "APPROXIMATION_SCALE=full"
    PROJECTION
        _land_epsg

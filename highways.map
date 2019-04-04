@@ -8,6 +8,9 @@ LAYER
     MAXSCALEDENOM _maxscale
     TYPE LINE
     NAME layername(railways,_layer_suffix)
+    METADATA
+        "wms_title" layername(railways,_layer_suffix)
+    END
     DATA _railways_data
     CLASSITEM "tunnel"
     CLASS
@@ -42,6 +45,9 @@ LAYER
     MINSCALEDENOM _minscale
     MAXSCALEDENOM _maxscale
     NAME layername(roads,_layer_suffix)
+    METADATA
+        "wms_title" layername(roads,_layer_suffix)
+    END
     CONNECTIONTYPE postgis
     CONNECTION "OSM_DB_CONNECTION"
     DATA _roads_data
@@ -867,6 +873,9 @@ LAYER
     MAXSCALEDENOM _maxscale
     TYPE LINE
     NAME layername(aeroways,_layer_suffix)
+    METADATA
+        "wms_title" layername(aeroways,_layer_suffix)
+    END
     CONNECTIONTYPE postgis
     CONNECTION "OSM_DB_CONNECTION"
     DATA "geometry from (select geometry, osm_id, type from OSM_PREFIX_aeroways) as foo using unique osm_id using srid=OSM_SRID"

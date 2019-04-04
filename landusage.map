@@ -6,6 +6,9 @@ LAYER
         "init=epsg:OSM_SRID"
     END
     NAME layername(landuse,_layer_suffix)
+    METADATA
+        "wms_title" layername(landuse,_layer_suffix)
+    END
     GROUP "default"
     CONNECTIONTYPE POSTGIS
     CONNECTION "OSM_DB_CONNECTION"
@@ -235,6 +238,9 @@ LAYER
        "init=epsg:OSM_SRID"
    END
    NAME layername(transport_areas,_layer_suffix)
+   METADATA
+    "wms_title" layername(transport_areas,_layer_suffix)
+   END
    GROUP "default"
    CONNECTIONTYPE POSTGIS
    CONNECTION "OSM_DB_CONNECTION"
@@ -275,6 +281,9 @@ LAYER
         "init=epsg:OSM_SRID"
     END
     NAME layername(waterarea,_layer_suffix)
+    METADATA
+        "wms_title" layername(waterarea,_layer_suffix)
+    END
     GROUP "default"
     CONNECTIONTYPE POSTGIS
     CONNECTION "OSM_DB_CONNECTION"
@@ -322,6 +331,9 @@ END
 LAYER
     TYPE LINE
     NAME layername(waterways,_layer_suffix)
+    METADATA
+        "wms_title" layername(waterways,_layer_suffix)
+    END
     STATUS ON
     GROUP "default"
     CONNECTIONTYPE POSTGIS

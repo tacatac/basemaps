@@ -6,6 +6,9 @@ LAYER
     END
     GROUP "default"
     NAME layername(buildings,_layer_suffix)
+    METADATA
+        "wms_title" layername(buildings,_layer_suffix)
+    END
     TYPE POLYGON
     CONNECTIONTYPE postgis
     CONNECTION "OSM_DB_CONNECTION"

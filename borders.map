@@ -6,6 +6,9 @@ LAYER
    MINSCALEDENOM _minscale
    TYPE LINE
    NAME layername(admin_fr,_layer_suffix)
+   METADATA
+    "wms_title" layername(admin_fr,_layer_suffix)
+   END
    DATA _admin_data
    CLASS
       STYLE
@@ -23,6 +26,9 @@ LAYER
    MINSCALEDENOM _minscale
    TYPE LINE
    NAME layername(borders,_layer_suffix)
+   METADATA
+    "wms_title" layername(borders,_layer_suffix)
+   END
    PROJECTION
      _border_epsg
    END

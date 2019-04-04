@@ -1,4 +1,3 @@
-
 LAYER
  STATUS ON
  GROUP "default" 
@@ -6,6 +5,9 @@ LAYER
  CONNECTIONTYPE postgis
  CONNECTION "OSM_DB_CONNECTION"
  NAME layername(places,_layer_suffix)
+ METADATA
+    "wms_title" layername(places,_layer_suffix)
+ END
  MINSCALEDENOM _minscale
  MAXSCALEDENOM _maxscale
  DATA _places_data
