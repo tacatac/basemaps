@@ -8,6 +8,7 @@ LAYER
  METADATA
     "wms_title" layername(places,_layer_suffix)
  END
+ EXTENT OSM_EXTENT
  MINSCALEDENOM _minscale
  MAXSCALEDENOM _maxscale
  DATA _places_data

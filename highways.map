@@ -4,6 +4,7 @@ LAYER
     STATUS ON
     CONNECTIONTYPE POSTGIS
     CONNECTION "OSM_DB_CONNECTION"
+    EXTENT OSM_EXTENT
     MINSCALEDENOM _minscale
     MAXSCALEDENOM _maxscale
     TYPE LINE
@@ -42,6 +43,7 @@ LAYER
     GROUP "default"
     STATUS ON
     TYPE LINE
+    EXTENT OSM_EXTENT
     MINSCALEDENOM _minscale
     MAXSCALEDENOM _maxscale
     NAME layername(roads,_layer_suffix)
@@ -869,6 +871,7 @@ END
 LAYER
     GROUP "default"
     STATUS ON
+    EXTENT OSM_EXTENT
     MINSCALEDENOM _minscale
     MAXSCALEDENOM _maxscale
     TYPE LINE
