@@ -4,11 +4,13 @@ LAYER
  TYPE POINT
  CONNECTIONTYPE postgis
  CONNECTION "OSM_DB_CONNECTION"
+#if OSM_FORCE_POSTGIS_EXTENT == 1
+ EXTENT OSM_EXTENT
+#endif
  NAME layername(places,_layer_suffix)
  METADATA
     "wms_title" layername(places,_layer_suffix)
  END
- EXTENT OSM_EXTENT
  MINSCALEDENOM _minscale
  MAXSCALEDENOM _maxscale
  DATA _places_data
