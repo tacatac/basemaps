@@ -85,7 +85,7 @@
                     "key": null
                 },
                 {
-                    "type": "pseudoarea",
+                    "type": "area",
                     "name": "area",
                     "key": null
                 },
@@ -745,7 +745,7 @@
             ],
             "type": "linestring",
             "filters": {
-                "exclude_tags": [
+                "reject": [
                     [
                         "area",
                         "yes"
@@ -871,7 +871,7 @@
                     "key": null
                 },
                 {
-                    "type": "pseudoarea",
+                    "type": "area",
                     "name": "area",
                     "key": null
                 }
