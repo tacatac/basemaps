@@ -22,11 +22,11 @@ See the [Imposm documentation]( https://imposm.org/docs/imposm3/latest/) for inf
 
 Until recently imposm did not create the landusages_gen and waterareas_gen tables. Since 2.3.0 this is not the case anymore.
 
-If you do not have the generalized tables, you can change the landusage_data and waterareas_data entries in `generate_style.py` so that it queries the non-generalized tables on the lower zoom levels (this will be slower for the lower zoom levels).
+If you do not have the generalized tables, you can change the landusage_data and waterareas_data entries in `styles/default.py` so that it queries the non-generalized tables on the lower zoom levels (this will be slower for the lower zoom levels).
 
 The generated mapfile can also be made to query an osm database created with osm2pgsql rather than imposm.
 
-This setup is not recommended as it will be much slower. To use the osm2pgsql schema, you should add the `osm2pgsql` entry to the list of styles for an entry of style_aliases near the end of generate_style.py, e.g:
+This setup is not recommended as it will be much slower. To use the osm2pgsql schema, you should add the `osm2pgsql` entry to the list of styles for an entry of `style_aliases` in `generate_style.py`, e.g:
 
     "bingosm2pgsql":"default,outlined,bing,osm2pgsql"
 
@@ -34,7 +34,7 @@ Then run `make STYLE=bingosm2pgsql` to create the osm-bingosm2pgsql.map
 
 #### OSM coastline data shapefiles
 
-The generated mapfiles also use OpenStreetMap coastline data for rendering low zoom maps. They can be downloaded by running `make` in the `data/` directory or from https://osmdata.openstreetmap.de/.
+The generated mapfiles also use OpenStreetMap coastline data for rendering low zoom maps. They can be downloaded by running `make data` or from https://osmdata.openstreetmap.de/.
 
 #### Boundaries data shapefiles
 
@@ -60,12 +60,16 @@ The `fonts/` directory, containing DejaVuSans fonts, needs to be in the same dir
 
 The `data/` directory, containing the coastline and border data, needs to be in the same directory as the mapfile.
 
+The `styles/` directory, containing named styles as Python modules.
+
 Of course these can be symlinks/hardlinks.
 
 ## Further configuration
 
-Most configuration and tweaks should be done in `generate_style.py`.
+Styling configuration and tweaks should be done in the `styles/` directory.
 
-Documentation as to how to edit `generate_style.py` to adapt the rendering has yet to be done, but is simple.
+The `style_aliases` dictionary in `generate_style.py` provides possible combinations of styles to apply, styles ordered later will shadow earlier ones.
+
+Documentation as to how to edit styles to adapt the rendering has yet to be done, but is simple.
 
 Check https://github.com/mapserver/basemaps/wiki/Tweaking-Map-Styles for a preliminary tutorial.
