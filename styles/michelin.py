@@ -18,7 +18,7 @@ michelin = {
     },
     'other_clr': {
         0: '"#aaaaaa"',
-        13: '"#ffffff"'
+        14: '"#ffffff"'
     },
     'display_primary_outline': {
         0: 0,
