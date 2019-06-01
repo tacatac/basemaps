@@ -94,7 +94,7 @@ LAYER
 #endif
     END
     CLASS
-        EXPRESSION {park,golf_course}
+        EXPRESSION {park,golf_course,heath}
         STYLE
             COLOR _park_clr
         END
