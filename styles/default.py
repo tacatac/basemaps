@@ -78,7 +78,7 @@ default = {
         9: '"data/land_polygons"'
     },
     'land_epsg': {
-        0: '"init=epsg: 3857"',
+        0: '"init=epsg:3857"',
     },
 
     ##### water #####
@@ -676,7 +676,7 @@ default = {
     ##### borders ######
     'border_data': '"data/boundaries.shp"',
     'border_epsg': {
-        0: '"init=epsg: 4326"'
+        0: '"init=epsg:4326"'
     },
 
     'display_border_2': {
