@@ -4,7 +4,7 @@
 outlined = {
     'display_motorway_outline': {
         0: 0,
-        7: 1
+        8: 1
     },
     'motorway_ol_width': {
         0: 0.5,
@@ -13,7 +13,7 @@ outlined = {
     'motorway_ol_clr': '0 0 0',
     'display_trunk_outline': {
         0: 0,
-        7: 1,
+        8: 1,
     },
     'trunk_ol_width': {
         0: 0.5,
