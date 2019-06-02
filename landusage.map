@@ -130,7 +130,7 @@ LAYER
 #endif
     END
     CLASS
-        EXPRESSION {park,golf_course,heath}
+        EXPRESSION {park,golf_course,heath,scrub}
         STYLE
             COLOR _park_clr
         END
