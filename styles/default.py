@@ -185,9 +185,9 @@ default = {
     'landusage_data': {
         0: '"geometry from (select geometry,osm_id,type,OSM_NAME_COLUMN as name from OSM_PREFIX_landusages_gen00) as foo using unique osm_id using srid=OSM_SRID"',
         6: '"geometry from (select geometry,osm_id,type,OSM_NAME_COLUMN as name from OSM_PREFIX_landusages_gen0) as foo using unique osm_id using srid=OSM_SRID"',
-        9: '"geometry from (select geometry ,osm_id, type, OSM_NAME_COLUMN as name from OSM_PREFIX_landusages_gen1 where type in (\'forest\',\'wood\',\'industrial\',\'commercial\',\'residential\')) as foo using unique osm_id using srid=OSM_SRID"',
-        10: '"geometry from (select geometry ,osm_id, type, OSM_NAME_COLUMN as name from OSM_PREFIX_landusages_gen1 where type in (\'forest\',\'wood\',\'pedestrian\',\'cemetery\',\'industrial\',\'commercial\',\'brownfield\',\'residential\',\'school\',\'college\',\'university\',\'military\',\'park\',\'golf_course\',\'heath\',\'hospital\',\'parking\',\'stadium\',\'sports_center\',\'pitch\') order by area desc) as foo using unique osm_id using srid=OSM_SRID"',
-        12: '"geometry from (select geometry ,osm_id, type, OSM_NAME_COLUMN as name from OSM_PREFIX_landusages where type in (\'forest\',\'wood\',\'pedestrian\',\'cemetery\',\'industrial\',\'commercial\',\'brownfield\',\'residential\',\'school\',\'college\',\'university\',\'military\',\'park\',\'golf_course\',\'heath\',\'hospital\',\'parking\',\'stadium\',\'sports_center\',\'pitch\') order by area desc) as foo using unique osm_id using srid=OSM_SRID"'
+        9: '"geometry from (select geometry ,osm_id, type, OSM_NAME_COLUMN as name from OSM_PREFIX_landusages_gen1 where type in (\'forest\',\'wood\',\'farmland\',\'industrial\',\'commercial\',\'residential\')) as foo using unique osm_id using srid=OSM_SRID"',
+        10: '"geometry from (select geometry ,osm_id, type, OSM_NAME_COLUMN as name from OSM_PREFIX_landusages_gen1 where type in (\'forest\',\'wood\',\'farmland\',\'pedestrian\',\'cemetery\',\'industrial\',\'commercial\',\'brownfield\',\'residential\',\'school\',\'college\',\'university\',\'military\',\'park\',\'golf_course\',\'heath\',\'hospital\',\'parking\',\'stadium\',\'sports_center\',\'pitch\') order by area desc) as foo using unique osm_id using srid=OSM_SRID"',
+        12: '"geometry from (select geometry ,osm_id, type, OSM_NAME_COLUMN as name from OSM_PREFIX_landusages where type in (\'forest\',\'wood\',\'farmland\',\'pedestrian\',\'cemetery\',\'industrial\',\'commercial\',\'brownfield\',\'residential\',\'school\',\'college\',\'university\',\'military\',\'park\',\'golf_course\',\'heath\',\'hospital\',\'parking\',\'stadium\',\'sports_center\',\'pitch\') order by area desc) as foo using unique osm_id using srid=OSM_SRID"'
     },
 
     'industrial_clr': '"#d1d1d1"',
@@ -264,6 +264,8 @@ default = {
     'forest_lbl_clr': '0 0 0',
     'forest_lbl_ol_clr': "255 255 255",
     'forest_lbl_ol_width': 2,
+
+    'farmland_clr': '"#eef0d5"',
 
     'display_transport_areas' : {
         0: 0,

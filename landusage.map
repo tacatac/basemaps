@@ -43,6 +43,12 @@ LAYER
       END
 #endif
     END
+    CLASS
+       EXPRESSION {farmland}
+       STYLE
+          COLOR _farmland_clr
+       END
+    END
 #if _display_residential==1
     CLASS
        EXPRESSION 'residential'
