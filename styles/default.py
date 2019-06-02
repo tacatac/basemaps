@@ -268,6 +268,12 @@ default = {
     'farmland_clr': '"#eef0d5"',
 
     'grass_clr': '"#cdebb0"',
+    'display_grass_lbl' : {0: 0, 11:1},
+    'grass_font': "sc",
+    'grass_lbl_size': 8,
+    'grass_lbl_clr': '0 0 0',
+    'grass_lbl_ol_clr': "255 255 255",
+    'grass_lbl_ol_width': 2,
 
     'orchard_clr': '"#aedfa3"',
 

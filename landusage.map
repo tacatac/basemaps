@@ -54,6 +54,24 @@ LAYER
        STYLE
           COLOR _grass_clr
        END
+#if _display_grass_lbl==1
+        LABEL
+          TYPE TRUETYPE
+          PARTIALS FALSE
+          FONT _grass_font
+          SIZE _grass_lbl_size
+       ENCODING "utf-8"
+          COLOR _grass_lbl_clr
+          OUTLINECOLOR _grass_lbl_ol_clr
+          OUTLINEWIDTH _grass_lbl_ol_width
+          PRIORITY 2
+          POSITION cc
+          WRAP ' '
+          MAXLENGTH 6
+          ALIGN CENTER
+          MINFEATURESIZE AUTO
+        END
+#endif
     END
     CLASS
        EXPRESSION {orchard,vineyard,plant_nursery}
