@@ -55,6 +55,12 @@ LAYER
           COLOR _grass_clr
        END
     END
+    CLASS
+       EXPRESSION {orchard,vineyard,plant_nursery}
+       STYLE
+          COLOR _orchard_clr
+       END
+    END
 #if _display_residential==1
     CLASS
        EXPRESSION 'residential'
