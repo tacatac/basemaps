@@ -49,6 +49,12 @@ LAYER
           COLOR _farmland_clr
        END
     END
+    CLASS
+       EXPRESSION {grass,grassland,meadow,village_green,garden}
+       STYLE
+          COLOR _grass_clr
+       END
+    END
 #if _display_residential==1
     CLASS
        EXPRESSION 'residential'
