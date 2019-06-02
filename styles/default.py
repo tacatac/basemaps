@@ -816,6 +816,16 @@ default = {
         15: 1
     },
 
+    'display_housenumbers': {
+        0: 0,
+        18: 1
+    },
+    'housenumbers_font': "sc",
+    'housenumbers_lbl_clr': '"#808080"',
+    'housenumbers_lbl_size': 8,
+    'housenumbers_lbl_ol_clr': "255 255 255",
+    'housenumbers_lbl_ol_width': 1,
+
 
     ####### aeroways #######
     'display_aeroways': {

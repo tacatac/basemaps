@@ -48,3 +48,39 @@ LAYER
    END
 END
 #endif
+#if _display_housenumbers == 1
+LAYER
+    STATUS ON
+    PROJECTION
+        "init=epsg:OSM_SRID"
+    END
+    GROUP "default"
+    NAME layername(housenumbers,_layer_suffix)
+    METADATA
+        "wms_title" layername(housenumbers,_layer_suffix)
+    END
+    TYPE POINT
+    CONNECTIONTYPE postgis
+    CONNECTION "OSM_DB_CONNECTION"
+#if OSM_FORCE_POSTGIS_EXTENT == 1
+    EXTENT OSM_EXTENT
+#endif
+    DATA "geometry from (select geometry,osm_id,type from OSM_PREFIX_housenumbers) as foo using unique osm_id using srid=OSM_SRID"
+    LABELITEM "type"
+    PROCESSING "LABEL_NO_CLIP=ON"
+    PROCESSING "CLOSE_CONNECTION=DEFER"
+    MAXSCALEDENOM _maxscale
+    MINSCALEDENOM _minscale
+    CLASS
+      LABEL
+         TYPE TRUETYPE
+         FONT _housenumbers_font
+         SIZE _housenumbers_lbl_size
+         COLOR _housenumbers_lbl_clr
+         OUTLINECOLOR _housenumbers_lbl_ol_clr
+         OUTLINEWIDTH _housenumbers_lbl_ol_width
+         ALIGN CENTER
+      END
+   END
+END
+#endif
