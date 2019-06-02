@@ -988,7 +988,7 @@ default = {
 
     'display_villages': {
         0: 0,
-        11: 1
+        12: 1
     },
     'display_village_symbol': {
         0: 1,
