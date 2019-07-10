@@ -265,6 +265,7 @@ default = {
     'forest_lbl_ol_clr': "255 255 255",
     'forest_lbl_ol_width': 2,
 
+    'display_farmland': {0: 0},
     'farmland_clr': '"#eef0d5"',
 
     'grass_clr': '"#cdebb0"',

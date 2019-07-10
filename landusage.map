@@ -43,12 +43,14 @@ LAYER
       END
 #endif
     END
+#if _display_farmland == 1
     CLASS
        EXPRESSION {farmland}
        STYLE
           COLOR _farmland_clr
        END
     END
+#endif
     CLASS
        EXPRESSION {grass,grassland,meadow,village_green,garden}
        STYLE
