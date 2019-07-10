@@ -50,7 +50,7 @@ michelin = {
     'education_clr': '"#ded1ab"',
     'hospital_clr': '"#e6c8c3"',
     'residential_clr': '255 234 206',
-    'land_clr': '"#ffffff"',
+    'land_clr': '"#f1f1f1"',
     'park_clr': '"#dcdcb4"',
     'ocean_clr': '172 220 244',
     'waterarea_clr': '172 220 244',
