@@ -77,12 +77,14 @@ LAYER
 #endif
     END
 #endif
+#if _display_orchard == 1
     CLASS
        EXPRESSION {orchard,vineyard,plant_nursery}
        STYLE
           COLOR _orchard_clr
        END
     END
+#endif
 #if _display_residential==1
     CLASS
        EXPRESSION 'residential'

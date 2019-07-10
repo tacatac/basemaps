@@ -277,6 +277,7 @@ default = {
     'grass_lbl_ol_clr': "255 255 255",
     'grass_lbl_ol_width': 2,
 
+    'display_orchard': {0: 0},
     'orchard_clr': '"#aedfa3"',
 
     'display_transport_areas' : {
