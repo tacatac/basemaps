@@ -26,6 +26,7 @@ LAYERDEBUG?=1
 PROJ_LIB?=`pwd`
 STYLE?=default
 #can also use google or bing
+ONLINERESOURCE?=http://localhost/?
 
 template=osmbase.map
 
@@ -104,7 +105,7 @@ generated/$(STYLE)level18.msinc: generate_style.py
 	python generate_style.py  -s $(STYLE) -l 18 > $@
 
 $(mapfile):$(template) $(includes)
-	$(CPP) -D_debug=$(DEBUG) -D_layerdebug=$(LAYERDEBUG)  -DOSM_PREFIX=$(OSM_PREFIX) -DOSM_SRID=$(OSM_SRID) -DOSM_FORCE_POSTGIS_EXTENT=$(OSM_FORCE_POSTGIS_EXTENT) -P -o $(mapfile) $(template) -DTHEME=$(STYLE) -D_proj_lib=\"$(PROJ_LIB)\" -Igenerated
+	$(CPP) -D_debug=$(DEBUG) -D_layerdebug=$(LAYERDEBUG)  -DOSM_PREFIX=$(OSM_PREFIX) -DOSM_SRID=$(OSM_SRID) -DOSM_FORCE_POSTGIS_EXTENT=$(OSM_FORCE_POSTGIS_EXTENT) -P -o $(mapfile) $(template) -DTHEME=$(STYLE) -D_proj_lib=\"$(PROJ_LIB)\" -DONLINERESOURCE=$(ONLINERESOURCE) -Igenerated
 	$(SED) 's/##.*$$//g' $(mapfile)
 	$(SED) '/^ *$$/d' $(mapfile)
 	$(SED) -e 's/OSM_PREFIX_/$(OSM_PREFIX)/g' $(mapfile)
@@ -114,6 +115,7 @@ $(mapfile):$(template) $(includes)
 	$(SED) -e 's/OSM_WMS_SRS/$(OSM_WMS_SRS)/g' $(mapfile)
 	$(SED) -e 's/OSM_NAME_COLUMN/$(OSM_NAME_COLUMN)/g' $(mapfile)
 	$(SED) -e 's/OSM_DB_CONNECTION/$(OSM_DB_CONNECTION)/g' $(mapfile)
+	$(SED) -e 's@ONLINERESOURCE@$(ONLINERESOURCE)@g' $(mapfile)
 
 boundaries.sql: boundaries.sql.in
 	cp -f $< $@

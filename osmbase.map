@@ -29,6 +29,7 @@ WEB
       "wms_srs" "OSM_WMS_SRS"
       "labelcache_map_edge_buffer" "-10"
       "wms_title" "OpenStreetMap"
+      "ows_onlineresource" "ONLINERESOURCE"
    END
 END
 
