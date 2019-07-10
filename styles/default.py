@@ -268,6 +268,7 @@ default = {
     'display_farmland': {0: 0},
     'farmland_clr': '"#eef0d5"',
 
+    'display_grasses': {0: 0},
     'grass_clr': '"#cdebb0"',
     'display_grass_lbl' : {0: 0, 11:1},
     'grass_font': "sc",

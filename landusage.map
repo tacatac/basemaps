@@ -51,6 +51,7 @@ LAYER
        END
     END
 #endif
+#if _display_grasses == 1
     CLASS
        EXPRESSION {grass,grassland,meadow,village_green,garden}
        STYLE
@@ -75,6 +76,7 @@ LAYER
         END
 #endif
     END
+#endif
     CLASS
        EXPRESSION {orchard,vineyard,plant_nursery}
        STYLE
