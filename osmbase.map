@@ -26,9 +26,9 @@ IMAGECOLOR _ocean_clr0
 WEB
    METADATA
       "ows_enable_request"   "*"
-      "wms_srs" "OSM_WMS_SRS"
+      "ows_srs" "OSM_WMS_SRS"
       "labelcache_map_edge_buffer" "-10"
-      "wms_title" "OpenStreetMap"
+      "ows_title" "OpenStreetMap"
       "ows_onlineresource" "ONLINERESOURCE"
    END
 END
