@@ -14,6 +14,7 @@ LAYER
  MINSCALEDENOM _minscale
  MAXSCALEDENOM _maxscale
  DATA _places_data
+ PROCESSING "CLOSE_CONNECTION=DEFER"
  LABELITEM 'name'
  CLASSITEM 'type'
 #if _display_capitals == 1
